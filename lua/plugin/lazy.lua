@@ -39,6 +39,13 @@ require("lazy").setup({
         module = false,
     },
     {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TDUpdate",
+        config = function()
+            require("plugin/config/treesitter")
+        end,
+    },
+    {
         "akinsho/toggleterm.nvim",
         version = "*",
         config = function()
